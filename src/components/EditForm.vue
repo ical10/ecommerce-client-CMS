@@ -2,13 +2,13 @@
   <form class='mt-4' @submit.prevent='editProduct'>
     <h3>Edit Product</h3>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder='Product name...' required='' v-model='product[0].name'>
+      <input type="text" class="form-control" placeholder='Product name...' required='' v-model='product.name'>
     </div>
     <div class="form-group">
-      <input type="number" class="form-control" placeholder="Product price..." required='' v-model='product[0].price'>
+      <input type="number" class="form-control" placeholder="Product price..." required='' v-model='product.price'>
     </div>
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Copy image url here..." required='' v-model='product[0].image_url'>
+      <input type="text" class="form-control" placeholder="Copy image url here..." required='' v-model='product.image_url'>
     </div>
     <div class="form-group">
       <label for='stock'>Number of stock: </label>
@@ -63,7 +63,6 @@ export default {
           this.$router.push('/dashboard')
         })
         .catch((err) => {
-          console.log('>>>>>>>', err)
           this.$store.commit('catchError', err.response.data.errors)
         })
     }
