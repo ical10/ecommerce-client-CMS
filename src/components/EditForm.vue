@@ -12,7 +12,7 @@
     </div>
     <div class="form-group">
       <label for='stock'>Number of stock: </label>
-      <input type="number" id='stock' class="form-control" required='' v-model='product[0].stock'>
+      <input type="number" id='stock' class="form-control" required='' v-model='product.stock'>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
